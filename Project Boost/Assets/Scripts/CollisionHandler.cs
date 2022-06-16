@@ -4,8 +4,17 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
     [SerializeField] float levelLoadDelay = 2f;
+    [SerializeField] AudioClip crash , success;
+    AudioSource audioSource;
+
+    bool isTransitioning = false;
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
    void OnCollisionEnter(Collision other) 
    {
+        if (isTransitioning) {return;}
         switch (other.gameObject.tag)
         {
             case "Friendly":
@@ -18,7 +27,7 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("You picked up fuel.");
                 break;
             default:
-                //StartCrashSequence();
+                StartCrashSequence();
                 break;
         } 
     
@@ -26,12 +35,17 @@ public class CollisionHandler : MonoBehaviour
 
     void StartSuccessSequence()
     {
+       isTransitioning = true;
+       audioSource.Stop();
+       audioSource.PlayOneShot(success);
        GetComponent<Movement>().enabled = false;
        Invoke("LoadNextLevel", levelLoadDelay); 
     }
    void StartCrashSequence()
    {
-        // to do add sfx upon crash
+        isTransitioning = true;
+        audioSource.Stop();
+        audioSource.PlayOneShot(crash);
         // to do add particle effect upon crash
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", levelLoadDelay);
