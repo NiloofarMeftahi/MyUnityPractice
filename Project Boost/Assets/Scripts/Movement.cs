@@ -35,6 +35,9 @@ public class Movement : MonoBehaviour
            if (!audioSource.isPlaying)
            {
               audioSource.PlayOneShot(mainEngine);
+           }
+           if (!jetParticles.isPlaying)
+           {
               jetParticles.Play();
            }
            
@@ -50,13 +53,19 @@ public class Movement : MonoBehaviour
       if (Input.GetKey(KeyCode.A))
         {
          ApplyRotation(rotationThrust);
-         thrustRightParticles.Play();
-         
+         if (!thrustRightParticles.isPlaying)
+         {
+             thrustRightParticles.Play();
+         } 
         }
         else if (Input.GetKey(KeyCode.D))
        {
          ApplyRotation(-rotationThrust);
-         thrustLeftParticles.Play();
+         if (!thrustLeftParticles.isPlaying)
+         {
+            thrustLeftParticles.Play();
+         
+         }
          
        }
        else

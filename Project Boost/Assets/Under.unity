@@ -599,6 +599,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 3610400955433234023, guid: bfd243f93218a734da6db3d5ab408a0a, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610400955433234023, guid: bfd243f93218a734da6db3d5ab408a0a, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610400955433234023, guid: bfd243f93218a734da6db3d5ab408a0a, type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd243f93218a734da6db3d5ab408a0a, type: 3}
 --- !u!1001 &5096396103947483620
