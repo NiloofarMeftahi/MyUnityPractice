@@ -1,0 +1,21 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.26f1 (7298b473bc1a) revision 7510196'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19042) 64bit ProfessionalEducation' Language: 'en' Physical Memory: 32723 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.26f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker9
+-projectPath
+C:/Users/Niloofar/Documents/GitHub/MyUnityPractice/VRProject
+-logFile
+Logs/AssetImportWorker9.log
+-srvPort
+64493
+Successfully changed project path to: C:/Users/Niloofar/Documents/GitHub/MyUnityPractice/VRProject
+C:/Users/Niloofar/Documents/GitHub/MyUnityPractice/VRProject
+Using Asset Import Pipeline V2.
