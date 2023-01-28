@@ -18,26 +18,11 @@ public class LightSwitch : MonoBehaviour
         action1.action.Enable();
        
     }
-    // private void OnEnable() 
-    // {   
-    //     lightSwitch.Enable();
-        
-    // }
-    // private void  OnDisable()  
-    // {   
-    //     lightSwitch.Disable();
-        
-    // }
+   
 
-    // Update is called once per frame
+   
     void Update()
     {
-        // float pinkLight = lightSwitch.ReadValue<Vector2>().x;
-        // float yellowLight = lightSwitch.ReadValue<Vector2>().y;
-        // if (pinkLight == 1)
-        //     changeLight.color = newColor;
-        // if (yellowLight == 1)
-        // changeLight.color = newColor1;
 
         action.action.performed += (ctx) =>
         {
