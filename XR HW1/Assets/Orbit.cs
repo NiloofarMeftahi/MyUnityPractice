@@ -15,6 +15,6 @@ public class Orbit : MonoBehaviour
     void Update()
     {
         transform.Rotate(Vector3.up * speed * Time.deltaTime);
-        //transform.Rotate(0, speed *Time.deltaTime, 0);
+       
     }
 }

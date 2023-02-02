@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class LightSwitch : MonoBehaviour
 {
     public Light changeLight;
@@ -10,7 +11,6 @@ public class LightSwitch : MonoBehaviour
     Color newColor1 = new Color(30f, 10f, 1f, 1f);
     public InputActionReference action;
     public InputActionReference action1;
-    // [SerializeField] InputAction lightSwitch;
     void Start()
     {
         changeLight = GetComponent<Light>();
@@ -24,15 +24,10 @@ public class LightSwitch : MonoBehaviour
     void Update()
     {
 
-        action.action.performed += (ctx) =>
-        {
+        if (Input.GetButtonDown("LeftContollerX"))
             changeLight.color = newColor;
-                 
-        };
-         action1.action.performed += (ctx) =>
-        {
+        if (Input.GetButtonDown("LeftContollerY"))
             changeLight.color = newColor1;
-                 
-        };
+
     }
 }
